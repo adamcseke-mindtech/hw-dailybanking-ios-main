@@ -15,7 +15,7 @@ protocol MoviesScreenViewModelProtocol: ObservableObject {
 
 struct MoviesScreen<ViewModel: MoviesScreenViewModelProtocol>: View {
     @ObservedObject var viewModel: ViewModel
-    @StateObject var favoriteMovies = FavoriteMovies()
+    @StateObject var favoriteMovies = FavoriteMovieManager()
 
     var body: some View {
         NavigationView {

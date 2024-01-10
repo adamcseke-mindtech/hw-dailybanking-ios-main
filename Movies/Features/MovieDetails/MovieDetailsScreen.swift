@@ -10,13 +10,12 @@ import SwiftUI
 
 protocol MovieDetailsScreenViewModelProtocol: ObservableObject {
     var movie: MovieVM { get }
-    func markMovie()
 }
 
 struct MovieDetailsScreen<ViewModel: MovieDetailsScreenViewModelProtocol>: View {
     @ObservedObject var viewModel: ViewModel
 
-    @EnvironmentObject var favoriteMovies: FavoriteMovies
+    @EnvironmentObject var favoriteMovies: FavoriteMovieManager
 
     var body: some View {
         ScrollView {
@@ -42,7 +41,6 @@ struct MovieDetailsScreen<ViewModel: MovieDetailsScreenViewModelProtocol>: View 
                     } else {
                         favoriteMovies.add(viewModel.movie)
                     }
-//                    viewModel.markMovie()
                 }) {
                     Image(systemName: favoriteMovies.contains(viewModel.movie) ? "star.fill":  "plus")
                             .resizable()

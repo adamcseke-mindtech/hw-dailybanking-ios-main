@@ -1,5 +1,5 @@
 //
-//  FavoriteMovies.swift
+//  FavoriteMovieManager.swift
 //  Movies
 //
 //  Created by Adam Cseke on 09/01/2024.
@@ -8,9 +8,8 @@
 import Foundation
 import Combine
 
-class FavoriteMovies: ObservableObject {
-    private var movies: Set<String>
-    private let saveKey = "Favorites"
+class FavoriteMovieManager: ObservableObject {
+    var movies: Set<String>
 
     init() {
         movies = []
@@ -18,10 +17,6 @@ class FavoriteMovies: ObservableObject {
 
     func contains(_ movie: MovieVM) -> Bool {
         movies.contains(movie.id)
-    }
-
-    func containsID(_ movieID: String) -> Bool {
-        movies.contains(movieID)
     }
 
     func add(_ movie: MovieVM) {

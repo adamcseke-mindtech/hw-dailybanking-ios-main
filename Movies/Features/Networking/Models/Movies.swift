@@ -8,7 +8,7 @@
 import Foundation
 
 // MARK: - Movies
-struct Movies: Codable {
+struct Movies: Codable, Equatable {
     let page: Int
     let results: [Movie]
     let totalPages, totalResults: Int

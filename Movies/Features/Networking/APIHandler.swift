@@ -8,12 +8,12 @@
 import Foundation
 import Moya
 
-public enum HandleAPI {
+public enum APIHandler {
     case getMovies
     case getGenres
 }
 
-extension HandleAPI: TargetType {
+extension APIHandler: TargetType {
     public var baseURL: URL {
         return URL(string: Configuration.endpoint)!
     }

@@ -22,7 +22,7 @@ class MovieService: MovieServiceProtocol {
     var moya: MoyaProvider<MultiTarget>!
 
     func getMovies() -> AnyPublisher<Movies, Error> {
-        let api = MultiTarget(HandleAPI.getMovies)
+        let api = MultiTarget(APIHandler.getMovies)
 
         print("User login url: \(api.baseURL)" + "\(api.path)")
 
@@ -33,7 +33,7 @@ class MovieService: MovieServiceProtocol {
     }
 
     func getGenres() -> AnyPublisher<Genres, Error> {
-        let api = MultiTarget(HandleAPI.getGenres)
+        let api = MultiTarget(APIHandler.getGenres)
 
         print("User login url: \(api.baseURL)" + "\(api.path)")
 

@@ -18,7 +18,4 @@ class MovieDetailsScreenViewModel: ObservableObject, MovieDetailsScreenViewModel
     init(movie: MovieVM) {
         self.movie = movie
     }
-
-    func markMovie() {
-    }
 }

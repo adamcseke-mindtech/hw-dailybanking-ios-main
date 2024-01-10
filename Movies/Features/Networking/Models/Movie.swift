@@ -19,7 +19,7 @@ extension Movie {
 }
 
 // MARK: - Movie
-struct Movie: Codable {
+struct Movie: Codable, Equatable {
     let genreIDS: [Int]
     let id: Int
     let originalTitle, overview: String

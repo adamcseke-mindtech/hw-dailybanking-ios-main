@@ -13,7 +13,7 @@ import InjectPropertyWrapper
 class MoviesScreenViewModel: ObservableObject, MoviesScreenViewModelProtocol {
 
     @Inject
-    private var movieService: MovieServiceProtocol
+    internal var movieService: MovieServiceProtocol
 
     @Published var movies: [MovieVM] = []
     @Published var genres: [Genre] = []
