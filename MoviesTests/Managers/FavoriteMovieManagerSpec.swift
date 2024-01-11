@@ -21,15 +21,15 @@ class FavoriteMovieManagerSpec: QuickSpec {
 
     override func spec() {
         describe("FavoriteMovies") {
-            var sut: FavoriteMovieManager!
+            var sut: MarkManager!
             var assembler: MainAssembler!
             var emittedMovie: MovieVM!
 
             beforeEach {
                 assembler = MainAssembler.create(withAssemblies: [TestAssembly()])
                 InjectSettings.resolver = assembler.container
-                sut = assembler.resolver.resolve(FavoriteMovieManager.self)
-                emittedMovie = MovieVM(id: "id", title: "", genres: "", overView: "", image: .init(small: "", large: ""), popularity: 0.0)
+                sut = assembler.resolver.resolve(MarkManager.self)
+                emittedMovie = MovieVM(id: "id", title: "", genres: "", overView: "", image: .init(small: "", large: ""), popularity: 0.0, isMarked: false)
             }
 
             afterEach {
@@ -41,11 +41,11 @@ class FavoriteMovieManagerSpec: QuickSpec {
 
             context("when no marked  movie") {
                 beforeEach {
-                    sut.movies = []
+                    sut.movieIds = []
                 }
 
                 it("cheks movies count is 0") {
-                    expect(sut.movies.count).to(equal(0))
+                    expect(sut.movieIds.count).to(equal(0))
                 }
             }
 
@@ -55,7 +55,7 @@ class FavoriteMovieManagerSpec: QuickSpec {
                 }
 
                 it("checks if movie marked") {
-                    expect(sut.contains(emittedMovie)).toNot(beNil())
+                    expect(sut.containsMovieId(emittedMovie.id)).toNot(beNil())
                 }
             }
 
@@ -65,7 +65,7 @@ class FavoriteMovieManagerSpec: QuickSpec {
                 }
 
                 it("checks if movie marked") {
-                    expect(sut.contains(emittedMovie)).to(beFalse())
+                    expect(sut.containsMovieId(emittedMovie.id)).to(beFalse())
                 }
             }
         }
@@ -77,8 +77,8 @@ extension FavoriteMovieManagerSpec {
 
         func assemble(container: Container) {
 
-            container.register(FavoriteMovieManager.self) { _ in
-                return FavoriteMovieManager()
+            container.register(MarkManager.self) { _ in
+                return MarkManager()
             }.inObjectScope(.transient)
         }
     }

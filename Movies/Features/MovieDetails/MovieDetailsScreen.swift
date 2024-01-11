@@ -10,12 +10,11 @@ import SwiftUI
 
 protocol MovieDetailsScreenViewModelProtocol: ObservableObject {
     var movie: MovieVM { get }
+    func markMovie()
 }
 
 struct MovieDetailsScreen<ViewModel: MovieDetailsScreenViewModelProtocol>: View {
     @ObservedObject var viewModel: ViewModel
-
-    @EnvironmentObject var favoriteMovies: FavoriteMovieManager
 
     var body: some View {
         ScrollView {
@@ -36,16 +35,12 @@ struct MovieDetailsScreen<ViewModel: MovieDetailsScreenViewModelProtocol>: View 
 
             VStack(spacing: 16) {
                 Button(action: {
-                    if favoriteMovies.contains(viewModel.movie) {
-                        favoriteMovies.remove(viewModel.movie)
-                    } else {
-                        favoriteMovies.add(viewModel.movie)
-                    }
+                    viewModel.markMovie()
                 }) {
-                    Image(systemName: favoriteMovies.contains(viewModel.movie) ? "star.fill":  "plus")
+                    Image(systemName: viewModel.movie.isMarked ? "star.fill":  "plus")
                             .resizable()
                             .frame(width: 24, height: 24)
-                            .foregroundColor(favoriteMovies.contains(viewModel.movie) ? .yellow : .black)
+                            .foregroundColor(viewModel.movie.isMarked ? .yellow : .black)
                 }
                 .padding(8)
                 .background(Material.regularMaterial)

@@ -10,7 +10,6 @@ import SwiftUI
 struct MovieListItem: View {
 
     let movie: MovieVM
-    let isFavorite: Bool
 
     var body: some View {
         HStack(spacing: 16) {
@@ -21,7 +20,7 @@ struct MovieListItem: View {
             }
             VStack(alignment: .leading, spacing: 4) {
                 HStack {
-                    if isFavorite {
+                    if movie.isMarked {
                         Image(systemName: "star.fill")
                             .resizable()
                             .frame(width: 24, height: 24)
@@ -51,7 +50,7 @@ struct MovieListItem: View {
 
 struct MovieListItem_Previews: PreviewProvider {
     static var previews: some View {
-        MovieListItem(movie: previewMovies[1], isFavorite: false)
+        MovieListItem(movie: previewMovies[1])
     }
 }
 

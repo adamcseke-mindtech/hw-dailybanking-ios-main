@@ -15,25 +15,25 @@ protocol MoviesScreenViewModelProtocol: ObservableObject {
 
 struct MoviesScreen<ViewModel: MoviesScreenViewModelProtocol>: View {
     @ObservedObject var viewModel: ViewModel
-    @StateObject var favoriteMovies = FavoriteMovieManager()
 
     var body: some View {
         NavigationView {
             List(viewModel.movies) { movie in
                 NavigationLink(destination: destinationView(using: movie)) {
-                    MovieListItem(movie: movie, isFavorite: favoriteMovies.contains(movie))
+                    MovieListItem(movie: movie)
                         .padding(.trailing, 8)
                 }
                 .padding(.trailing, 16)
                 .listRowInsets(EdgeInsets())
             }
             .navigationTitle("Movies")
+            .onAppear {
+                viewModel.getMovies()
+            }
         }
         .navigationViewStyle(.stack)
-        .environmentObject(favoriteMovies)
         .onAppear {
             viewModel.getGenres()
-            viewModel.getMovies()
         }
     }
 

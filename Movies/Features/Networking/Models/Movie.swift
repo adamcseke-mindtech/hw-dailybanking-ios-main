@@ -7,17 +7,6 @@
 
 import Foundation
 
-extension Movie {
-    func asMovieVM(genres: String) -> MovieVM {
-        MovieVM(id: String(id),
-                title: title,
-                genres: genres,
-                overView: overview,
-                image: MovieVM.Image(small: Constants.Poster.small + posterPath, large: Constants.Poster.original + posterPath),
-                popularity: Float(popularity))
-    }
-}
-
 // MARK: - Movie
 struct Movie: Codable, Equatable {
     let genreIDS: [Int]
@@ -38,5 +27,13 @@ struct Movie: Codable, Equatable {
 }
 
 extension Movie {
-
+    func asMovieVM(genres: String, isMarked: Bool) -> MovieVM {
+        MovieVM(id: String(id),
+                title: title,
+                genres: genres,
+                overView: overview,
+                image: MovieVM.Image(small: Constants.Poster.small + posterPath, large: Constants.Poster.original + posterPath),
+                popularity: Float(popularity),
+                isMarked: isMarked)
+    }
 }

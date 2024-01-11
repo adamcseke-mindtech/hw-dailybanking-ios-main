@@ -93,6 +93,10 @@ extension MoviesScreenViewModelSpec {
                 return MoviesScreenViewModel()
             }.inObjectScope(.transient)
 
+            container.register(MarkManager.self) { _ in
+                return MarkManager()
+            }.inObjectScope(.transient)
+
             container.register(MovieServiceProtocol.self) { _ in
                 let mock = mock(MovieServiceProtocol.self)
                 return mock

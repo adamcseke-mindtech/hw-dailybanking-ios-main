@@ -15,6 +15,9 @@ class MoviesScreenViewModel: ObservableObject, MoviesScreenViewModelProtocol {
     @Inject
     internal var movieService: MovieServiceProtocol
 
+    @Inject
+    var markManager: MarkManager
+
     @Published var movies: [MovieVM] = []
     @Published var genres: [Genre] = []
     @Published var errorText: String = ""
@@ -33,7 +36,8 @@ class MoviesScreenViewModel: ObservableObject, MoviesScreenViewModelProtocol {
                 self.movies.removeAll()
                 if !movies.results.isEmpty {
                     movies.results.forEach { movie in
-                        self.movies.append(movie.asMovieVM(genres: self.getGenreNames(genreIDs: movie.genreIDS)))
+                        self.movies.append(movie.asMovieVM(genres: self.getGenreNames(genreIDs: movie.genreIDS),
+                                                           isMarked: self.markManager.containsMovieId(String(movie.id))))
                     }
                 }
             })

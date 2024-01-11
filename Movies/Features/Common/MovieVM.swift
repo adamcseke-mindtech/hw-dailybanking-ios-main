@@ -19,6 +19,7 @@ struct MovieVM: Identifiable, Equatable {
     let overView: String
     let image: Image
     let popularity: Float
+    var isMarked: Bool
 }
 
 extension MovieVM {

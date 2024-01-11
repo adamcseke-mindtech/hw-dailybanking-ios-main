@@ -16,8 +16,8 @@ let previewMovies: [MovieVM] = [
         image: .init(
             small: "https://image.tmdb.org/t/p/w185/tbVZ3Sq88dZaCANlUcewQuHQOaE.jpg",
             large: "https://image.tmdb.org/t/p/w500/tbVZ3Sq88dZaCANlUcewQuHQOaE.jpg"),
-        popularity: 7.6
-//        isMarked: false
+        popularity: 7.6,
+        isMarked: false
     ),
     .init(
         id: UUID().uuidString,
@@ -27,8 +27,8 @@ let previewMovies: [MovieVM] = [
         image: .init(
             small: "https://image.tmdb.org/t/p/w185/1UCOF11QCw8kcqvce8LKOO6pimh.jpg",
             large: "https://image.tmdb.org/t/p/w500/1UCOF11QCw8kcqvce8LKOO6pimh.jpg"),
-        popularity: 7.1
-//        isMarked: true
+        popularity: 7.1,
+        isMarked: true
     ),
     .init(
         id: UUID().uuidString,
@@ -38,7 +38,7 @@ let previewMovies: [MovieVM] = [
         image: .init(
             small: "https://image.tmdb.org/t/p/w185/vFIHbiy55smzi50RmF8LQjmpGcx.jpg",
             large: "https://image.tmdb.org/t/p/w500/vFIHbiy55smzi50RmF8LQjmpGcx.jpg"),
-        popularity: 6.9
-//        isMarked: false
+        popularity: 6.9,
+        isMarked: false
     )
 ]

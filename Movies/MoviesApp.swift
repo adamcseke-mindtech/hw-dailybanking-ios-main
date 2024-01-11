@@ -24,7 +24,6 @@ class AppDelegate: NSObject, UIApplicationDelegate {
     let assembler: MainAssembler
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-        // TODO: Put your "appdelegate" code here
         return true
     }
 
@@ -35,7 +34,8 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 
     override init() {
         assembler = MainAssembler.create(withAssemblies: [
-            ServiceAssembly()
+            ServiceAssembly(),
+            ManagerAssembly()
         ])
         InjectSettings.resolver = assembler.container
     }
