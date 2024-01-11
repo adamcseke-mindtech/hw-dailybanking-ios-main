@@ -8,8 +8,15 @@
 @testable import Movies
 import Foundation
 
-extension Movie {
-    static var any: Movie {
-        Movie(genreIDS: [], id: 0, originalTitle: "", overview: "", popularity: 0.0, posterPath: "", releaseDate: "", title: "")
+extension MovieVM {
+    static var any: MovieVM {
+        MovieVM(
+            id: "",
+            title: "",
+            genres: "",
+            overView: "",
+            image: .init(small: "", large: ""),
+            popularity: 0.0,
+            isMarked: false)
     }
 }

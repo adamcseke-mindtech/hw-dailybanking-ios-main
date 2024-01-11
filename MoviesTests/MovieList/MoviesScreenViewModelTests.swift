@@ -59,12 +59,12 @@ class MoviesScreenViewModelSpec: QuickSpec {
                 cancellable = nil
             }
 
-            context("fetch Movies") {
+            context("when requested to get Movies") {
                 beforeEach {
                     sut.getMovies()
                 }
 
-                it("request to get movies from API") {
+                it("requests to get movies from API") {
                     verify(mockService.getMovies()).wasCalled()
                 }
 

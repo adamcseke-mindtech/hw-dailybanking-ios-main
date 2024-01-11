@@ -37,6 +37,4 @@ class MovieDetailsScreenViewModel: ObservableObject, MovieDetailsScreenViewModel
             movie.isMarked.toggle()
         }
     }
-
-
 }
