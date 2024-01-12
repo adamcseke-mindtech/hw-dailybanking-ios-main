@@ -5,12 +5,13 @@
 //  Created by Adam Cseke on 11/01/2024.
 //
 
+// swiftlint:disable function_body_length
+
 @testable import Movies
 import Moya
 import Combine
 import Quick
 import Nimble
-import Moya
 import Mockingbird
 import Swinject
 import InjectPropertyWrapper
@@ -105,3 +106,4 @@ extension MoviesScreenViewModelSpec {
     }
 }
 
+// swiftlint:enable function_body_length

@@ -10,7 +10,6 @@ import Moya
 import Combine
 import Quick
 import Nimble
-import Moya
 import Mockingbird
 import Swinject
 import InjectPropertyWrapper
@@ -91,4 +90,3 @@ extension MovieDetailsScreenViewModelSpec {
         }
     }
 }
-

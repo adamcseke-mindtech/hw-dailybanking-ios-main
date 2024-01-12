@@ -11,7 +11,6 @@ import Moya
 
 class ServiceAssembly: Assembly {
 
-    // swiftlint:disable function_body_length
     func assemble(container: Container) {
 
         container.register(MovieServiceProtocol.self) { _ in
@@ -27,4 +26,3 @@ class ServiceAssembly: Assembly {
 
     }
 }
-

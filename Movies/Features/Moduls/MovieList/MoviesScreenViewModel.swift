@@ -36,8 +36,10 @@ class MoviesScreenViewModel: ObservableObject, MoviesScreenViewModelProtocol {
                 self.movies.removeAll()
                 if !movies.results.isEmpty {
                     movies.results.forEach { movie in
-                        self.movies.append(movie.asMovieVM(genres: self.getGenreNames(genreIDs: movie.genreIDS),
-                                                           isMarked: self.markManager.containsMovieId(String(movie.id))))
+                        self.movies.append(movie.asMovieVM(
+                            genres: self.getGenreNames(genreIDs: movie.genreIDS),
+                            isMarked: self.markManager.containsMovieId(String(movie.id)))
+                        )
                     }
                 }
             })

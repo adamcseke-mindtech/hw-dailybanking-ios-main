@@ -5,6 +5,8 @@
 //  Created by Foundation on 2022. 02. 14..
 //
 
+// swiftlint:disable line_length colon
+
 import SwiftUI
 import Swinject
 import InjectPropertyWrapper
@@ -49,3 +51,5 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         assembler.dispose()
     }
 }
+
+// swiftlint:enable line_length colon

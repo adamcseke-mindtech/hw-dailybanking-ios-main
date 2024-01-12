@@ -5,6 +5,8 @@
 //  Created by Adam Cseke on 09/01/2024.
 //
 
+// swiftlint:disable line_length
+
 import Foundation
 
 // MARK: - Movie
@@ -37,3 +39,5 @@ extension Movie {
                 isMarked: isMarked)
     }
 }
+
+// swiftlint:enable line_length

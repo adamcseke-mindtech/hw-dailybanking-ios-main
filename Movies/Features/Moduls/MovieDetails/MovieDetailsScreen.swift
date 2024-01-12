@@ -5,6 +5,8 @@
 //  Created by Foundation on 2022. 02. 14..
 //
 
+// swiftlint:disable multiple_closures_with_trailing_closure
+
 import Foundation
 import SwiftUI
 
@@ -71,3 +73,5 @@ struct MovieDetailsScreem_Previews: PreviewProvider {
         }
     }
 }
+
+// swiftlint:enable multiple_closures_with_trailing_closure

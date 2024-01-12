@@ -17,7 +17,7 @@ import Swift
 import SwiftUI
 import Swinject
 
-// swiftlint:disable force_cast line_length
+// swiftlint:disable force_cast line_length superfluous_disable_command
 private let mkbGenericStaticMockContext = Mockingbird.GenericStaticMockContext()
 
 // MARK: - Mocked MovieServiceProtocol
@@ -88,3 +88,4 @@ public final class MovieServiceProtocolMock: MovieServiceProtocol, Mockingbird.M
 public func mock(_ type: MovieServiceProtocol.Protocol, file: StaticString = #file, line: UInt = #line) -> MovieServiceProtocolMock {
   return MovieServiceProtocolMock(sourceLocation: Mockingbird.SourceLocation(file, line))
 }
+// swiftlint:enable force_cast line_length superfluous_disable_command

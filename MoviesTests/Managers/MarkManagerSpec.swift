@@ -5,8 +5,9 @@
 //  Created by Adam Cseke on 10/01/2024.
 //
 
+// swiftlint:disable function_body_length
+
 @testable import Movies
-import XCTest
 import Moya
 import Combine
 import Quick
@@ -104,3 +105,5 @@ extension MarkManagerSpec {
         }
     }
 }
+
+// swiftlint:enable function_body_length

@@ -5,8 +5,10 @@
 //  Created by Foundation on 2022. 02. 14..
 //
 
+// swiftlint:disable force_cast line_length superfluous_disable_command
+
 import Foundation
-// swiftlint:disable force_cast line_length
+
 let previewMovies: [MovieVM] = [
     .init(
         id: UUID().uuidString,
@@ -42,3 +44,5 @@ let previewMovies: [MovieVM] = [
         isMarked: false
     )
 ]
+
+// swiftlint:enable force_cast line_length superfluous_disable_command

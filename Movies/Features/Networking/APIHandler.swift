@@ -5,6 +5,8 @@
 //  Created by Adam Cseke on 09/01/2024.
 //
 
+// swiftlint:disable colon
+
 import Foundation
 import Moya
 
@@ -60,3 +62,5 @@ extension APIHandler: TargetType {
         }
     }
 }
+
+// swiftlint:enable colon

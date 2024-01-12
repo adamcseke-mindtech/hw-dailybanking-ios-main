@@ -11,4 +11,3 @@ protocol ConfigurationProtocol {
     static var endpoint: String { get }
     static var apiKey: String { get }
 }
-
