@@ -26,7 +26,7 @@ struct MoviesScreen<ViewModel: MoviesScreenViewModelProtocol>: View {
                 .padding(.trailing, 16)
                 .listRowInsets(EdgeInsets())
             }
-            .navigationTitle("Movies")
+            .navigationTitle(L10n.MovieList.Nav.title)
             .onAppear {
                 viewModel.getMovies()
             }

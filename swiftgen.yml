@@ -1,0 +1,19 @@
+xcassets:
+  - inputs: Movies/Resources/Images/Images.xcassets
+    outputs:
+      templateName: swift5
+      output: Movies/Resources/Generated/Images.swift
+      params:
+        enumName: Images
+  - inputs: Movies/Resources/Colors/Colors.xcassets
+    outputs:
+      templateName: swift5
+      output: Movies/Resources/Generated/Colors.swift
+      params:
+        enumName: Colors
+
+strings:
+  inputs: Movies/Resources/Localization/en.lproj/Localizable.strings
+  outputs:
+    templateName: structured-swift5
+    output: Movies/Resources/Generated/Strings.swift

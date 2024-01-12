@@ -1,0 +1,9 @@
+/* 
+  Localizable.strings
+  Movies
+
+  Created by Adam Cseke on 12/01/2024.
+  
+*/
+
+"movieList.nav.title" = "Movies";
