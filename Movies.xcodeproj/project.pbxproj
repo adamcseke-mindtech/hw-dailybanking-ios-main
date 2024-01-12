@@ -461,10 +461,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9F477C1627BA5CF900DAE295 /* Build configuration list for PBXNativeTarget "Movies" */;
 			buildPhases = (
+				37B54C582B511D1D000116CE /* SwiftGen */,
+				37B54C5F2B511E51000116CE /* SwiftLint */,
 				9F477C0427BA5CF800DAE295 /* Sources */,
 				9F477C0527BA5CF800DAE295 /* Frameworks */,
 				9F477C0627BA5CF800DAE295 /* Resources */,
-				37B54C582B511D1D000116CE /* SwiftGen */,
 			);
 			buildRules = (
 			);
@@ -586,6 +587,25 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftgen; then\n  swiftgen -v\nelse\n  echo \"warning: swiftgen not installed\"\nfi\n\n";
+		};
+		37B54C5F2B511E51000116CE /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed\"\nfi\n\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

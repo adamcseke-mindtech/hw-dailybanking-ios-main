@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+// swiftlint:disable force_cast line_length
 let previewMovies: [MovieVM] = [
     .init(
         id: UUID().uuidString,

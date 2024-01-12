@@ -17,6 +17,7 @@ import Swift
 import SwiftUI
 import Swinject
 
+// swiftlint:disable force_cast line_length
 private let mkbGenericStaticMockContext = Mockingbird.GenericStaticMockContext()
 
 // MARK: - Mocked MovieServiceProtocol

@@ -14,6 +14,7 @@ import Moya
 import Swinject
 import InjectPropertyWrapper
 
+// swiftlint:disable force_try line_length
 private var expectedGetMoviesResponse = EndpointSampleResponse.networkResponse(502, Data())
 
 class MovieServiceSpec: QuickSpec {
