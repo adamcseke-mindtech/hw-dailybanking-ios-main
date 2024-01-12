@@ -7,6 +7,7 @@
 
 import Foundation
 
+// Images have their own specific URL to get the right size of them
 struct Constants {
     struct Poster {
         static let original: String = "https://image.tmdb.org/t/p/original"
