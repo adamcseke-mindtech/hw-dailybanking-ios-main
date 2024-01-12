@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		37218CC02B4EE3EA00B64F86 /* FavoriteMovieManagerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37218CBF2B4EE3EA00B64F86 /* FavoriteMovieManagerSpec.swift */; };
+		37218CC02B4EE3EA00B64F86 /* MarkManagerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37218CBF2B4EE3EA00B64F86 /* MarkManagerSpec.swift */; };
 		372E112E2B4FB40600256BF9 /* MoviesScreenViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372E112D2B4FB40600256BF9 /* MoviesScreenViewModelTests.swift */; };
 		37B54C262B500F36000116CE /* Quick in Frameworks */ = {isa = PBXBuildFile; productRef = 37B54C252B500F36000116CE /* Quick */; };
 		37B54C292B500F9C000116CE /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = 37B54C282B500F9C000116CE /* Nimble */; };
@@ -65,7 +65,7 @@
 
 /* Begin PBXFileReference section */
 		37218CA02B4ED43500B64F86 /* MoviesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoviesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		37218CBF2B4EE3EA00B64F86 /* FavoriteMovieManagerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteMovieManagerSpec.swift; sourceTree = "<group>"; };
+		37218CBF2B4EE3EA00B64F86 /* MarkManagerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkManagerSpec.swift; sourceTree = "<group>"; };
 		372E112D2B4FB40600256BF9 /* MoviesScreenViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesScreenViewModelTests.swift; sourceTree = "<group>"; };
 		37B54C2B2B5011A7000116CE /* TestServiceAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestServiceAssembly.swift; sourceTree = "<group>"; };
 		37B54C2D2B5011C2000116CE /* ServiceAssemblySpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceAssemblySpec.swift; sourceTree = "<group>"; };
@@ -133,7 +133,7 @@
 		371812092B4FCB6400FA337A /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				37218CBF2B4EE3EA00B64F86 /* FavoriteMovieManagerSpec.swift */,
+				37218CBF2B4EE3EA00B64F86 /* MarkManagerSpec.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -508,7 +508,7 @@
 				37B54C3F2B501F1F000116CE /* Movies+Stub.swift in Sources */,
 				372E112E2B4FB40600256BF9 /* MoviesScreenViewModelTests.swift in Sources */,
 				37B54C482B50529B000116CE /* MovieVM+Stub.swift in Sources */,
-				37218CC02B4EE3EA00B64F86 /* FavoriteMovieManagerSpec.swift in Sources */,
+				37218CC02B4EE3EA00B64F86 /* MarkManagerSpec.swift in Sources */,
 				37B54C312B501211000116CE /* MovieServiceSpec.swift in Sources */,
 				37B54C3C2B5019DC000116CE /* MoviesTests-MoviesMocks.generated.swift in Sources */,
 				37B54C2C2B5011A7000116CE /* TestServiceAssembly.swift in Sources */,
